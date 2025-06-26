@@ -1,6 +1,6 @@
-**Handleitung: Generative KI**
+# Handleitung: Generative KI
 
-## Stand: 17.12.2024
+**Stand: 17.12.2024**
 
 ChatGPT, Gemini, Claude und andere Angebote generativer KI sollten bei der Anfertigung musikwissenschaftlicher Hausarbeiten, Referate, BA- und MA-Arbeiten sowie Dissertationen nur mit Vorsicht zum Einsatz kommen. Zu groß sind die Lücken im musikhistorischen Wissen, wodurch die Gefahr von Halluzinationen steigt. Dennoch gibt es einige sinnvolle Einsatzmöglichkeiten, die im Folgenden erläutert werden.
 
@@ -40,13 +40,13 @@ Mit schriftlichen Arbeiten soll Ihre eigene intellektuelle Leistung geprüft wer
 
 Schema:
 
-"Prompt"1, Datum des Chats, Sprachmodell/KI2, Link zum Chat3, Chatverlauf siehe PDF im Anhang.
+"Prompt"<sup>1</sup>, Datum des Chats, Sprachmodell/KI<sup>2</sup>, Link zum Chat<sup>3</sup>, Chatverlauf siehe PDF im Anhang.
 
-1 Bei längeren oder mehreren Prompts sollte nur die zentrale Frage oder Aufforderung mit anschließenden Auslassungspunkten \[…\] wiedergegeben werden.  
+<sup>1</sup> Bei längeren oder mehreren Prompts sollte nur die zentrale Frage oder Aufforderung mit anschließenden Auslassungspunkten \[…\] wiedergegeben werden.  
    
-2 Hier ist so genau wie möglich die verwendete Version des Sprachmodells zu kennzeichnen. Werden spezielle GPTs verwendet, die auf ein bestehendes Sprachmodell aufbauen, kann dies in folgender Form kenntlich gemacht werden: \[Name des speziellen GPT\] auf der Basis von \[Sprachmodell/KI\]. Namen der Programme, GPTs, Sprachmodelle, KIs etc. hierbei \- wie bei Werken generell \- kursiv angeben.  
+<sup>2</sup> Hier ist so genau wie möglich die verwendete Version des Sprachmodells zu kennzeichnen. Werden spezielle GPTs verwendet, die auf ein bestehendes Sprachmodell aufbauen, kann dies in folgender Form kenntlich gemacht werden: \[Name des speziellen GPT\] auf der Basis von \[Sprachmodell/KI\]. Namen der Programme, GPTs, Sprachmodelle, KIs etc. hierbei \- wie bei Werken generell \- kursiv angeben.  
    
-3 Sofern der Anbieter eine solche Funktion bereitstellt. Der Link ersetzt nicht die Wiedergabe des vollständigen Chatverlaufs im Anhang.  
+<sup>3</sup> Sofern der Anbieter eine solche Funktion bereitstellt. Der Link ersetzt nicht die Wiedergabe des vollständigen Chatverlaufs im Anhang.  
    
 **Beispiel**  
    
@@ -74,3 +74,6 @@ These papers highlight the diversity of techniques and algorithms used in audio-
 [^1]:  [https://scholarai.io/](https://scholarai.io/), abgerufen am 16.12.2024, [https://elicit.com/](https://elicit.com/) und [https://about.jstor.org/research-tool](https://about.jstor.org/research-tool), jeweils abgerufen am 17.12.2024.
 
 [^2]:  Zum derzeitigen Stand finden sich über die ersten beiden Angebote vor allem naturwissenschaftliche Aufsätze, daneben auch einiget aus der systematischen Musikwissenschaft, jedoch kaum musikhistorische Texte. Mit der Funktion "Find Related Topics", die auf spezielle Textpassagen bezogen werden kann, wird durch JSTORs Interactive Research Tool eine Art Schneeballverfahren möglich, das sich bei der Literaturrecherche als effektiv erweisen kann.
+
+## Contributors
+- Niels Pfeffer, M. A.
