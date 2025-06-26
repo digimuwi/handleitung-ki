@@ -4,9 +4,9 @@
 
 ChatGPT, Gemini, Claude und andere Angebote generativer KI sollten bei der Anfertigung musikwissenschaftlicher Hausarbeiten, Referate, BA- und MA-Arbeiten sowie Dissertationen nur mit Vorsicht zum Einsatz kommen. Zu groß sind die Lücken im musikhistorischen Wissen, wodurch die Gefahr von Halluzinationen steigt. Dennoch gibt es einige sinnvolle Einsatzmöglichkeiten, die im Folgenden erläutert werden.
 
-Ob und in welcher Form der Einsatz von generativer KI erlaubt ist, gibt die Lehrperson vor. In jedem Fall muss, je nach Vorgabe des Dozenten, in der Eigenständigkeitserklärung versichert werden, dass entweder generative KI nicht zum Einsatz kam oder, falls die Verwendung zugelassen wurde, in welchem Rahmen sie erfolgte. Das Muster finden Sie auf unserer Homepage unter [https://uni-tuebingen.de/de/128739](https://uni-tuebingen.de/de/128739). 
+Ob und in welcher Form der Einsatz von generativer KI erlaubt ist, gibt die Lehrperson vor. In jedem Fall muss, je nach Vorgabe des Dozenten, in der Eigenständigkeitserklärung versichert werden, dass entweder generative KI nicht zum Einsatz kam oder, falls die Verwendung zugelassen wurde, in welchem Rahmen sie erfolgte.
 
-**Recherche**
+### Recherche
 
 Zur Literaturrecherche ist ChatGPT in seiner herkömmlichen Form ungeeignet, da es keine Garantie gibt, dass angegebene Literatur tatsächlich existiert.
 
@@ -14,29 +14,29 @@ Dennoch kann generative KI zur Literaturrecherche nützlich sein, etwa beim Aufs
 
 Der Einsatz befreit Sie selbstverständlich nicht davon, dass Sie Literatur, die Sie nachweisen, auch gelesen haben müssen. Haben Sie sich auf diesem Weg erfolgreich Literatur beschafft, muss der Rechercheweg nicht im Einzelnen nachgewiesen werden (wie auch die Verwendung von Suchmaschinen nicht nachgewiesen wird).
 
-**Zusammenfassungen**
+### Zusammenfassungen
 
 Generative KI *kann* weiterhin in Verbindung mit Volltextdatenbanken eingesetzt werden, um Forschungsergebnisse aus einem fachfremden Gebiet zusammenzufassen – wenn die Aneignung entsprechenden Wissens oder entsprechender Fähigkeiten im Rahmen Ihrer Hausarbeit nicht zumutbar ist. In diesem Fall muss der Einsatz nachgewiesen werden und es muss klar erkenntlich sein, an welcher Stelle Sie die Zusammenfassung einer KI paraphrasieren.
 
 Artikel, die im Volltext als PDF vorliegen, können u. a. auf ChatGPT hochgeladen und befragt werden, beispielsweise nach Zusammenfassungen. Von dieser Verwendungsform wird im Allgemeinen abgeraten, da Sie so potenziell Ungenauigkeiten reproduzieren. Nutzen Sie dennoch diese Möglichkeit, so muss der Einsatz mit dem Zusatz „zitiert nach“ hinter der eigentlichen Publikation nachgewiesen und gerechtfertigt werden.
 
-**Übersetzungen**
+### Übersetzungen
 
 Sinnvoll kann der Einsatz von generativer KI bei Übersetzungen sowohl von Quellentexten als auch wissenschaftlicher Literatur aus wenig geläufigen Sprachen sein, da Sie so einen erweiterten Blickwinkel gewinnen können. Achten Sie darauf, dass Sie die Möglichkeiten zur Verfeinerung der Übersetzung anwenden, etwa indem Sie in dem entsprechenden Prompt dazu auffordern, unklare Stellen entsprechend zu kennzeichnen, zu kommentieren und eventuelle Alternativübersetzungen zur Diskussion zu stellen. Den Einsatz weisen Sie analog mit dem Zusatz „übersetzt von: \[…\]“ nach.  
 
-**Schreibstil**
+### Schreibstil
 
 Weiterhin kann es sinnvoll sein, dass Sie Ihre Texte von generativer KI auf grammatische und orthographische Fehler hin korrekturlesen lassen. Sie können generative KI auch nach Argumentationsfehlern befragen. Wie immer sollten Sie auch hier eine kritische Haltung gegenüber Verbesserungsvorschlägen bewahren.
 
 Nutzen Sie keinesfalls generative KI zur Ausformulierung Ihrer Texte. Abgesehen davon, dass der Vorgang Copy-Paste ohne entsprechende Kennzeichnung immer ein Plagiat darstellt, pflegt insbesondere ChatGPT einen allgemeinen, redundanten und nichtssagenden Schreibstil. Niemand möchte einen glatten und unprägnanten Text lesen, bei dem sich schnell der Eindruck einstellt, dass er nicht aus Ihrer Feder stammt. Außerdem besteht die Gefahr, dass KI urheberrechtsverletzende Inhalte verwendet, die Sie wiederum in Ihre Arbeit übernehmen.
 
-**Weitere Einsatzmöglichkeiten**
+### Weitere Einsatzmöglichkeiten
 
 Jenseits der hier erwähnten Einsatzfelder können sich weitere auftun. Im Zweifelsfall sollten Sie darlegen, inwiefern der Einsatz generativer KI an der jeweiligen Stelle gerechtfertigt ist – etwa, weil durch sie eine Erkenntnis gewonnen werden kann, die anderweitig nicht oder nur mit einem Aufwand möglich wäre, der den Rahmen Ihrer Arbeit übersteigen würde.
 
 Mit schriftlichen Arbeiten soll Ihre eigene intellektuelle Leistung geprüft werden. Sie kann in besonderen Kontexten auch in der Anwendung von KI-Tools liegen, muss aber immer erkennbar und nachvollziehbar bleiben.
 
-**Zitierform**
+### Zitierform
 
 Schema:
 
@@ -48,11 +48,11 @@ Schema:
    
 <sup>3</sup> Sofern der Anbieter eine solche Funktion bereitstellt. Der Link ersetzt nicht die Wiedergabe des vollständigen Chatverlaufs im Anhang.  
    
-**Beispiel**  
+#### Beispiel 
    
 „Which are the most important papers on audio-to-score alignment? \[…\]“, 18.7.2024, Scholar AI auf der Basis von ChatGPT 4, [https://chatgpt.com/share/18febaab-2d97-453e-8e31-17b7bf192765](https://chatgpt.com/share/18febaab-2d97-453e-8e31-17b7bf192765), Chatverlauf siehe PDF im Anhang.
 
-**Anhang**
+#### Anhang
 
 Prompt: "Which are the most important papers on audio-to-score alignment? Shortly summarize the techniques and algorithms they are using."
 
