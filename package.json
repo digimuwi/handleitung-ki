@@ -1,0 +1,14 @@
+{
+  "name": "handleitung-ki",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Statische Website der Handleitung Generative KI und musikwissenschaftliches Arbeiten",
+  "scripts": {
+    "build": "node build/build.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0"
+  }
+}
