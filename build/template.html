@@ -78,19 +78,22 @@
     cursor: pointer;
     list-style: none;
     display: inline-flex;
-    align-items: baseline;
-    gap: .4em;
+    align-items: center;
+    gap: .5em;
   }
   details.meta > summary::-webkit-details-marker { display: none; }
   details.meta > summary::before {
-    content: "▸";
-    font-size: .7em;
-    color: var(--muted);
+    content: "›";
+    font-size: 1.25em;
+    line-height: 1;
+    color: var(--accent);
     transition: transform .15s ease;
     display: inline-block;
+    transform: translateY(-.05em);
   }
-  details.meta[open] > summary::before { transform: rotate(90deg); }
+  details.meta[open] > summary::before { transform: translateY(-.05em) rotate(90deg); }
   details.meta > summary:hover { color: var(--text); }
+  details.meta > summary:hover::before { color: var(--link-hover); }
   .revlist {
     list-style: none;
     margin: 1rem 0 .25rem;
@@ -124,6 +127,19 @@
     .revlist .rev-subject { grid-column: 1 / -1; }
   }
   main { padding: 2.25rem 0 1rem; }
+  .contribute {
+    margin: 0 0 2.5rem;
+    padding: .9rem 1.1rem;
+    background: var(--code-bg);
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: .9rem;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .contribute p { margin: 0; }
+  .contribute a { color: var(--text); text-decoration-color: var(--border); }
+  .contribute a:hover { color: var(--accent); }
   main h2 {
     font-size: 1.45rem;
     margin: 2.75rem 0 .7rem;
@@ -182,6 +198,17 @@
   }
   footer.site a { color: var(--link); }
   footer.site p { margin: .35rem 0; }
+  footer.site .cite, footer.site .license { max-width: 34rem; }
+  footer.site .cite { margin-bottom: .9rem; }
+  footer.site .label {
+    display: block;
+    color: var(--text);
+    font-weight: 600;
+    font-size: .78rem;
+    letter-spacing: .02em;
+    margin-bottom: .15rem;
+  }
+  footer.site .links { margin-top: 1.4rem; }
   ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 </style>
 </head>
@@ -194,13 +221,16 @@
   </header>
   <main>
     <div class="wrap">
+      <aside class="contribute">
+        <p>Ergänzungen und Korrekturen sind herzlich willkommen. Zur Diskussion dient ein <a href="https://github.com/digimuwi/handleitung-ki/issues">Issue</a>, für einen konkreten Änderungsvorschlag ein <a href="https://github.com/digimuwi/handleitung-ki/pulls">Pull Request</a> auf den <a href="https://github.com/digimuwi/handleitung-ki/blob/main/entwurf.md">Quelltext</a>.</p>
+      </aside>
       {{CONTENT}}
     </div>
   </main>
   <footer class="site">
     <div class="wrap">
-      <p>Ergänzungen und Korrekturen sind willkommen – Änderungen werden per Pull Request auf GitHub vorgeschlagen, Diskussionen über Issues geführt.</p>
-      <p><a href="https://github.com/digimuwi/handleitung-ki">Projekt auf GitHub</a> · <a href="https://github.com/digimuwi/handleitung-ki/blob/main/entwurf.md">Quelltext (entwurf.md)</a></p>
+      {{COLOPHON}}
+      <p class="links"><a href="https://github.com/digimuwi/handleitung-ki">Projekt auf GitHub</a> · <a href="https://github.com/digimuwi/handleitung-ki/blob/main/entwurf.md">Quelltext (entwurf.md)</a></p>
     </div>
   </footer>
 </body>

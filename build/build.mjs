@@ -75,9 +75,16 @@ ${rows}
   metaHtml = `<p class="meta">Stand: ${escapeHtml(stand)}</p>`;
 }
 
+// Kolophon im Fuß: Zitiervorschlag + Lizenz
+const siteUrl = "https://digimuwi.github.io/handleitung-ki/";
+const citeRev = rev ? ` Revision ${escapeHtml(rev.count)} (${escapeHtml(rev.date)}).` : "";
+const colophonHtml = `<p class="cite"><span class="label">Zitiervorschlag</span>${escapeHtml(title)}.${citeRev} URL: <a href="${siteUrl}">${siteUrl}</a></p>
+      <p class="license"><span class="label">Lizenz</span>Dieser Text steht unter <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" rel="license">CC BY-SA 4.0</a> – Weiterverwendung mit Namensnennung und unter gleichen Bedingungen.</p>`;
+
 const html = template
   .replaceAll("{{TITLE}}", escapeHtml(title))
   .replace("{{META}}", metaHtml)
+  .replace("{{COLOPHON}}", colophonHtml)
   .replace("{{CONTENT}}", contentHtml);
 
 await mkdir(resolve(root, "dist"), { recursive: true });
