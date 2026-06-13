@@ -10,32 +10,34 @@
 <meta property="og:description" content="Handleitung für den Einsatz generativer KI beim musikwissenschaftlichen Arbeiten.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fbfaf7;
-    --surface: #ffffff;
-    --text: #1f1d1a;
-    --muted: #6b6457;
-    --accent: #7a5c2e;
-    --border: #e6e1d8;
-    --link: #8a5a1a;
-    --link-hover: #5e3d0f;
-    --code-bg: #f1ede5;
-    --shadow: 0 1px 3px rgba(40,30,10,.06), 0 8px 28px rgba(40,30,10,.05);
-    --maxw: 46rem;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #707070;
+    --accent: #7c1f1a;
+    --border: #e7e7e7;
+    --link: #1a1a1a;
+    --link-hover: #7c1f1a;
+    --code-bg: #f4f4f4;
+    --maxw: 40rem;
+    --serif: "Source Serif 4", Charter, "Iowan Old Style", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #16140f;
-      --surface: #1e1b15;
-      --text: #ece7dc;
-      --muted: #a79e8c;
-      --accent: #d9b779;
-      --border: #322d23;
-      --link: #e0bd83;
-      --link-hover: #f0d6a6;
-      --code-bg: #262219;
-      --shadow: 0 1px 3px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.35);
+      --bg: #16161a;
+      --text: #e6e6e6;
+      --muted: #9a9a9a;
+      --accent: #e6877d;
+      --border: #2a2a2e;
+      --link: #e6e6e6;
+      --link-hover: #e6877d;
+      --code-bg: #232327;
     }
   }
   * { box-sizing: border-box; }
@@ -44,101 +46,150 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-    font-size: 1.125rem;
-    line-height: 1.7;
+    font-family: var(--serif);
+    font-optical-sizing: auto;
+    font-size: 1.1rem;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.4rem; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
   header.site {
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-    padding: 3.5rem 0 2.25rem;
-  }
-  header.site .kicker {
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: .72rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 .9rem;
-    font-weight: 600;
+    padding: 4rem 0 1.5rem;
   }
   header.site h1 {
-    font-size: clamp(1.9rem, 4.5vw, 2.85rem);
+    font-size: 2.3rem;
     line-height: 1.12;
     margin: 0;
-    letter-spacing: -.01em;
     font-weight: 600;
+    letter-spacing: -.01em;
   }
-  header.site .stand {
+  header.site .meta {
     margin: 1.1rem 0 0;
     color: var(--muted);
-    font-size: .95rem;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: .88rem;
+    font-family: var(--sans);
+    font-weight: 500;
   }
-  main { padding: 2.75rem 0 1rem; }
-  main h2 {
-    font-size: 1.55rem;
-    margin: 2.75rem 0 .8rem;
-    padding-top: 1.5rem;
+  header.site .meta a { color: var(--muted); text-decoration-color: var(--border); }
+  header.site .meta a:hover { color: var(--accent); }
+  /* Aufklappbare Revisionshistorie */
+  details.meta > summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: .4em;
+  }
+  details.meta > summary::-webkit-details-marker { display: none; }
+  details.meta > summary::before {
+    content: "▸";
+    font-size: .7em;
+    color: var(--muted);
+    transition: transform .15s ease;
+    display: inline-block;
+  }
+  details.meta[open] > summary::before { transform: rotate(90deg); }
+  details.meta > summary:hover { color: var(--text); }
+  .revlist {
+    list-style: none;
+    margin: 1rem 0 .25rem;
+    padding: 0;
     border-top: 1px solid var(--border);
+  }
+  .revlist li {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    gap: .25rem .9rem;
+    align-items: baseline;
+    padding: .55rem 0;
+    border-bottom: 1px solid var(--border);
+    margin: 0;
+  }
+  .revlist .rev-hash { text-decoration: none; }
+  .revlist .rev-hash code {
+    font-family: var(--mono);
+    font-size: .8em;
+    background: var(--code-bg);
+    padding: .1em .4em;
+    border-radius: 3px;
+    color: var(--muted);
+  }
+  .revlist .rev-hash:hover code { color: var(--accent); }
+  .revlist .rev-date { color: var(--muted); white-space: nowrap; }
+  .revlist .rev-subject { color: var(--text); }
+  .revlist .rev-author { color: var(--muted); white-space: nowrap; }
+  @media (max-width: 34rem) {
+    .revlist li { grid-template-columns: auto 1fr; }
+    .revlist .rev-subject { grid-column: 1 / -1; }
+  }
+  main { padding: 2.25rem 0 1rem; }
+  main h2 {
+    font-size: 1.45rem;
+    margin: 2.75rem 0 .7rem;
     font-weight: 600;
     letter-spacing: -.005em;
   }
-  main h2:first-of-type { border-top: 0; padding-top: 0; margin-top: .5rem; }
-  main h3 { font-size: 1.22rem; margin: 2rem 0 .6rem; font-weight: 600; }
-  main h4 { font-size: 1.05rem; margin: 1.6rem 0 .5rem; font-weight: 600; color: var(--muted); }
-  p { margin: 0 0 1.15rem; }
-  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--link-hover); }
-  ol, ul { padding-left: 1.4rem; }
+  main h2:first-of-type { margin-top: .5rem; }
+  main h3 { font-size: 1.2rem; margin: 2.2rem 0 .5rem; font-weight: 600; }
+  main h4 {
+    font-size: .82rem; margin: 1.7rem 0 .5rem; font-weight: 600;
+    font-family: var(--sans); letter-spacing: .04em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  p { margin: 0 0 1.2rem; }
+  a {
+    color: var(--link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
+  }
+  a:hover { color: var(--link-hover); text-decoration-color: currentColor; }
+  ol, ul { padding-left: 1.3rem; }
   li { margin: .35rem 0; }
-  li::marker { color: var(--muted); }
+  li::marker { color: var(--accent); }
   em { font-style: italic; }
   sup { font-size: .72em; }
   code {
     background: var(--code-bg);
-    padding: .12em .4em;
-    border-radius: 4px;
-    font-size: .88em;
-    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    padding: .1em .38em;
+    border-radius: 3px;
+    font-size: .83em;
+    font-family: var(--mono);
     word-break: break-word;
   }
   /* Fußnoten */
   .footnotes {
-    margin-top: 3rem;
-    padding-top: 1.4rem;
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--border);
-    font-size: .95rem;
+    font-size: .92rem;
     color: var(--muted);
   }
-  .footnotes ol { padding-left: 1.2rem; }
+  .footnotes ol { padding-left: 1.1rem; }
   .footnotes li { margin: .5rem 0; }
   .footnote-backref { text-decoration: none; }
   a.footnote-ref { text-decoration: none; font-weight: 600; }
-  hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 2.75rem 0; }
   footer.site {
     border-top: 1px solid var(--border);
-    background: var(--surface);
-    margin-top: 3rem;
-    padding: 2.25rem 0 3rem;
+    margin-top: 3.5rem;
+    padding: 1.75rem 0 4rem;
     color: var(--muted);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: .92rem;
+    font-family: var(--sans);
+    font-size: .88rem;
+    line-height: 1.6;
   }
   footer.site a { color: var(--link); }
-  footer.site p { margin: .3rem 0; }
-  ::selection { background: rgba(217,183,121,.35); }
+  footer.site p { margin: .35rem 0; }
+  ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 </style>
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <p class="kicker">Handleitung · Musikwissenschaft</p>
       <h1>{{TITLE}}</h1>
-      {{STAND}}
+      {{META}}
     </div>
   </header>
   <main>
